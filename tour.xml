@@ -69,6 +69,7 @@
 	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
 	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
 	
 	<action name="do_crop_animation" scope="local" args="framewidth, frameheight, framerate">
 		<!-- define local variables -->
@@ -97,6 +98,10 @@
 		);
 	</action>
 	
+	<action name="change_scene" scope="local" args="sceneName">
+		loadscene(get(sceneName), null, KEEPVIEW, NOBLEND)
+	</action>
+
 	<scene name="scene_Prueba1" title="Prueba1" onstart="" thumburl="panos/Prueba1.tiles/thumb.jpg" lat="18.48795278" lng="-69.96347500" alt="26.80" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
@@ -104,9 +109,6 @@
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Prueba1.tiles/preview.jpg" />
-
-		<hotspot name="spot3" url="Explosion.png" onloaded="do_crop_animation(100,100, 60)"  ath="calc:random*90- 45" atv="calc:random*60 - 30" zoom="true" enabled="false" onlastframe="calc(ath, random*90-45); calc(atv, random*60-30);" />
-		<hotspot name="spot1" url="animatedhotspot_white.png" onloaded="do_crop_animation(64,64, 60);"   ath="72" atv="-8" onclick="looktohotspot(get(name),65);" />
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Prueba1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
@@ -153,8 +155,7 @@
 
 		<preview url="panos/Plaza.tiles/preview.jpg" />
 
-		<hotspot name="spot3" url="Explosion.png" onloaded="do_crop_animation(100,100, 60)"  ath="calc:random*90- 45" atv="calc:random*60 - 30" zoom="true" enabled="false" onlastframe="calc(ath, random*90-45); calc(atv, random*60-30);" />
-		<hotspot name="spot1" url="animatedhotspot_white.png" onloaded="do_crop_animation(64,64, 60);"   ath="72" atv="-8" onclick="looktohotspot(get(name),65);" />
+		<hotspot name="plaza => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo);" ath="-21.4" atv="-3.34"  />
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Plaza.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
@@ -170,6 +171,9 @@
 
 		<preview url="panos/Pasillo.tiles/preview.jpg" />
 
+		<hotspot name="pasillo => plaza" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Plaza);" ath="-178.8" atv="1.11"  />
+		<hotspot name="pasillo => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo);" ath="3.82" atv="3.63"  />
+
 		<image prealign="0|0.0|0">
 			<cube url="panos/Pasillo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
@@ -184,6 +188,9 @@
 
 		<preview url="panos/Parqueo.tiles/preview.jpg" />
 
+		<hotspot name="parqueo => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo);" ath="99.05" atv="-3.071"  />
+		<hotspot name="parqueo => cafeteria" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Cafeteria);" ath="-75.21" atv="1.022"  />
+
 		<image prealign="0|0.0|0">
 			<cube url="panos/Parqueo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
@@ -197,6 +204,8 @@
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/Cafeteria.tiles/preview.jpg" />
+
+		<hotspot name="cafeteria => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo);" ath="170" atv="0.19"  />
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Cafeteria.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
