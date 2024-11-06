@@ -97,119 +97,50 @@
 		);
 	</action>
 	
-	<scene name="scene_R0010068" title="R0010068" onstart="" thumburl="panos/R0010068.tiles/thumb.jpg" lat="18.48795278" lng="-69.96347500" alt="26.80" heading="0.0">
+	<scene name="scene_Prueba1" title="Prueba1" onstart="" thumburl="panos/Prueba1.tiles/thumb.jpg" lat="18.48795278" lng="-69.96347500" alt="26.80" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0010068.tiles/preview.jpg" />
+		<preview url="panos/Prueba1.tiles/preview.jpg" />
 
 		<hotspot name="spot3" url="Explosion.png" onloaded="do_crop_animation(100,100, 60)"  ath="calc:random*90- 45" atv="calc:random*60 - 30" zoom="true" enabled="false" onlastframe="calc(ath, random*90-45); calc(atv, random*60-30);" />
 		<hotspot name="spot1" url="animatedhotspot_white.png" onloaded="do_crop_animation(64,64, 60);"   ath="72" atv="-8" onclick="looktohotspot(get(name),65);" />
 
 		<image prealign="0|0.0|0">
-			<cube url="panos/R0010068.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+			<cube url="panos/Prueba1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
 
 
 	</scene>
 
-	<scene name="scene_R0010069" title="R0010069" onstart="" thumburl="panos/R0010069.tiles/thumb.jpg" lat="18.48796389" lng="-69.96350278" alt="22.90" heading="0.0">
+	<scene name="scene_Prueba2" title="Prueba2" onstart="" thumburl="panos/Prueba2.tiles/thumb.jpg" lat="18.48796111" lng="-69.96347500" alt="27.10" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0010069.tiles/preview.jpg" />
+		<preview url="panos/Prueba2.tiles/preview.jpg" />
 
 		<image prealign="0|0.0|0">
-			<cube url="panos/R0010069.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+			<cube url="panos/Prueba2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
 	</scene>
 
-	<scene name="scene_R0010081" title="R0010081" onstart="" thumburl="panos/R0010081.tiles/thumb.jpg" lat="18.48794722" lng="-69.96347778" alt="23.60" heading="0.0">
+
+	<scene name="scene_Blooper" title="Blooper" onstart="" thumburl="panos/Blooper.tiles/thumb.jpg" lat="18.48785556" lng="-69.96328889" alt="22.10" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0010081.tiles/preview.jpg" />
+		<preview url="panos/Blooper.tiles/preview.jpg" />
 
 		<image prealign="0|0.0|0">
-			<cube url="panos/R0010081.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_R0010082" title="R0010082" onstart="" thumburl="panos/R0010082.tiles/thumb.jpg" lat="18.48789444" lng="-69.96341667" alt="22.00" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/R0010082.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/R0010082.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_R0010085" title="R0010085" onstart="" thumburl="panos/R0010085.tiles/thumb.jpg" lat="18.48796111" lng="-69.96347500" alt="27.10" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/R0010085.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/R0010085.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_R0010086" title="R0010086" onstart="" thumburl="panos/R0010086.tiles/thumb.jpg" lat="18.48796389" lng="-69.96347778" alt="27.10" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/R0010086.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/R0010086.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_R0010087" title="R0010087" onstart="" thumburl="panos/R0010087.tiles/thumb.jpg" lat="18.48785556" lng="-69.96328889" alt="22.10" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/R0010087.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/R0010087.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_R0010088" title="R0010088" onstart="" thumburl="panos/R0010088.tiles/thumb.jpg" lat="18.48795833" lng="-69.96347500" alt="26.80" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/R0010088.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/R0010088.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+			<cube url="panos/Blooper.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
 	</scene>
@@ -231,58 +162,44 @@
 
 	</scene>
 
-	<scene name="scene_R0010090" title="R0010090" onstart="" thumburl="panos/R0010090.tiles/thumb.jpg" lat="18.48770556" lng="-69.96343611" alt="23.30" heading="0.0">
+	<scene name="scene_Pasillo" title="Pasillo" onstart="" thumburl="panos/Pasillo.tiles/thumb.jpg" lat="18.48775278" lng="-69.96355000" alt="23.39" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0010090.tiles/preview.jpg" />
+		<preview url="panos/Pasillo.tiles/preview.jpg" />
 
 		<image prealign="0|0.0|0">
-			<cube url="panos/R0010090.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+			<cube url="panos/Pasillo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
 	</scene>
 
-	<scene name="scene_R0010091" title="R0010091" onstart="" thumburl="panos/R0010091.tiles/thumb.jpg" lat="18.48775278" lng="-69.96355000" alt="23.39" heading="0.0">
+	<scene name="scene_Parqueo" title="Parqueo" onstart="" thumburl="panos/Parqueo.tiles/thumb.jpg" lat="18.48785000" lng="-69.96324167" alt="27.07" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0010091.tiles/preview.jpg" />
+		<preview url="panos/Parqueo.tiles/preview.jpg" />
 
 		<image prealign="0|0.0|0">
-			<cube url="panos/R0010091.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+			<cube url="panos/Parqueo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
 	</scene>
 
-	<scene name="scene_R0010092" title="R0010092" onstart="" thumburl="panos/R0010092.tiles/thumb.jpg" lat="18.48785000" lng="-69.96324167" alt="27.07" heading="0.0">
+	<scene name="scene_Cafeteria" title="Cafeteria" onstart="" thumburl="panos/Cafeteria.tiles/thumb.jpg" lat="18.48782500" lng="-69.96297778" alt="27.00" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/R0010092.tiles/preview.jpg" />
+		<preview url="panos/Cafeteria.tiles/preview.jpg" />
 
 		<image prealign="0|0.0|0">
-			<cube url="panos/R0010092.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_R0010093" title="R0010093" onstart="" thumburl="panos/R0010093.tiles/thumb.jpg" lat="18.48782500" lng="-69.96297778" alt="27.00" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/R0010093.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/R0010093.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+			<cube url="panos/Cafeteria.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
 
 	</scene>
