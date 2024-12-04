@@ -97,6 +97,13 @@
 			);
 		);
 	</action>
+
+	<action name="show_hotspot" scope="local" args="hotspotName">
+		set(hotspot[get(hotspotName)].visible, true);
+	</action>
+	<action name="hide_hotspot" scope="local" args="hotspotName">
+		set(hotspot[get(hotspotName)].visible, false);
+	</action>
 	
 	<action name="change_scene" scope="local" args="sceneName, Hoffset">
 		loadscene(get(sceneName), null, MERGE, NOBLEND);
@@ -156,7 +163,7 @@
 
 		<preview url="panos/Plaza.tiles/preview.jpg" />
 
-		<hotspot name="plaza => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, 0);" ath="-21.4" atv="-3.34"  />
+		<hotspot name="plaza => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, 0);"	 ath="-21.4" atv="-3.34"  />
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Plaza.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
@@ -189,7 +196,8 @@
 
 		<preview url="panos/Parqueo.tiles/preview.jpg" />
 
-		<hotspot name="parqueo => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, -180);" ath="99.05" atv="-3.071"  />
+		<hotspot name="parqueo => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, -180);" onover="show_hotspot(textoPasillo)" onout="hide_hotspot(textoPasillo);" ath="99.05" atv="-3.071"  />
+		<hotspot name="textoPasillo" type="text" renderer="auto" ath="99.05" atv="2.50" text="Pasillo" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
 		<hotspot name="parqueo => cafeteria" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Cafeteria, -10);" ath="-75.21" atv="1.022"  />
 
 		<image prealign="0|0.0|0">
