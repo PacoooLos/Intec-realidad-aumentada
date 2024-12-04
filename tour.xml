@@ -163,7 +163,8 @@
 
 		<preview url="panos/Plaza.tiles/preview.jpg" />
 
-		<hotspot name="plaza => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, 0);"	 ath="-21.4" atv="-3.34"  />
+		<hotspot name="plaza => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, 0);"	 onover="show_hotspot(textoPasillo2)" onout="hide_hotspot(textoPasillo2);" ath="-21.4" atv="-3.34"  />
+		<hotspot name="textoPasillo2" type="text" renderer="auto" ath="-21.4" atv="0.34" text="Pasillo" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Plaza.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
@@ -179,8 +180,10 @@
 
 		<preview url="panos/Pasillo.tiles/preview.jpg" />
 
-		<hotspot name="pasillo => plaza" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Plaza, 160);" ath="-178.8" atv="1.11"  />
-		<hotspot name="pasillo => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo, -65);" ath="3.82" atv="3.63"  />
+		<hotspot name="pasillo => plaza" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Plaza, 160);" onover="show_hotspot(textoPlaza)" onout="hide_hotspot(textoPlaza);" ath="-178.8" atv="1.11"  />
+		<hotspot name="textoPlaza" type="text" renderer="auto" ath="-178.8" atv="5.11" text="Plaza" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
+		<hotspot name="pasillo => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo, -65);" onover="show_hotspot(textoParqueo2)" onout="hide_hotspot(textoParqueo2);" ath="3.82" atv="3.63"  />
+		<hotspot name="textoParqueo2" type="text" renderer="auto" ath="3.82" atv="7.63" text="Parqueo" bg="false" css="font-size:20px;color:#00000;font-family:Futura" interactive="false" visible="false"/>
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Pasillo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
@@ -198,7 +201,8 @@
 
 		<hotspot name="parqueo => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, -180);" onover="show_hotspot(textoPasillo)" onout="hide_hotspot(textoPasillo);" ath="99.05" atv="-3.071"  />
 		<hotspot name="textoPasillo" type="text" renderer="auto" ath="99.05" atv="2.50" text="Pasillo" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
-		<hotspot name="parqueo => cafeteria" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Cafeteria, -10);" ath="-75.21" atv="1.022"  />
+		<hotspot name="parqueo => cafeteria" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Cafeteria, -10);" onover="show_hotspot(textoCafeteria)" onout="hide_hotspot(textoCafeteria);" ath="-75.21" atv="1.022"  />
+		<hotspot name="textoCafeteria" type="text" renderer="auto" ath="-75.21" atv="5" text="Cafeteria" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Parqueo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
@@ -214,8 +218,8 @@
 
 		<preview url="panos/Cafeteria.tiles/preview.jpg" />
 
-		<hotspot name="cafeteria => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo, 103);" ath="170" atv="0.19"  />
-
+		<hotspot name="cafeteria => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo, 103);" onover="show_hotspot(textoParqueo)" onout="hide_hotspot(textoPasillo);" ath="170" atv="0.19"  />
+		<hotspot name="textoParqueo" type="text" renderer="auto" ath="170" atv="3.7" text="Parqueo" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
 		<image prealign="0|0.0|0">
 			<cube url="panos/Cafeteria.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
 		</image>
