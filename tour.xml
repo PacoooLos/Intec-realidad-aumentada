@@ -110,52 +110,7 @@
 		lookat(get(Hoffset), 0);
 	</action>
 
-	<scene name="scene_Prueba1" title="Prueba1" onstart="" thumburl="panos/Prueba1.tiles/thumb.jpg" lat="18.48795278" lng="-69.96347500" alt="26.80" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/Prueba1.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/Prueba1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-
-
-	</scene>
-
-	<scene name="scene_Prueba2" title="Prueba2" onstart="" thumburl="panos/Prueba2.tiles/thumb.jpg" lat="18.48796111" lng="-69.96347500" alt="27.10" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/Prueba2.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/Prueba2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-
-	<scene name="scene_Blooper" title="Blooper" onstart="" thumburl="panos/Blooper.tiles/thumb.jpg" lat="18.48785556" lng="-69.96328889" alt="22.10" heading="0.0">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/Blooper.tiles/preview.jpg" />
-
-		<image prealign="0|0.0|0">
-			<cube url="panos/Blooper.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_Plaza" title="Plaza" onstart="" thumburl="panos/Plaza.tiles/thumb.jpg" lat="18.48767500" lng="-69.96366944" alt="22.39" heading="0.0">
+		<scene name="scene_Plaza" title="Plaza" onstart="" thumburl="panos/Plaza.tiles/thumb.jpg" lat="18.48767500" lng="-69.96366944" alt="22.39" heading="0.0">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
@@ -226,5 +181,49 @@
 
 	</scene>
 
+	<scene name="scene_Prueba1" title="Prueba1" onstart="" thumburl="panos/Prueba1.tiles/thumb.jpg" lat="18.48795278" lng="-69.96347500" alt="26.80" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Prueba1.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/Prueba1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+		</image>
+
+
+
+	</scene>
+
+	<scene name="scene_Prueba2" title="Prueba2" onstart="" thumburl="panos/Prueba2.tiles/thumb.jpg" lat="18.48796111" lng="-69.96347500" alt="27.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Prueba2.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/Prueba2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+		</image>
+
+	</scene>
+
+
+	<scene name="scene_Blooper" title="Blooper" onstart="" thumburl="panos/Blooper.tiles/thumb.jpg" lat="18.48785556" lng="-69.96328889" alt="22.10" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Blooper.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/Blooper.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
+		</image>
+
+	</scene>
 
 </krpano>
