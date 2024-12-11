@@ -98,6 +98,37 @@
 		);
 	</action>
 
+	<action name="scene3dtransition" scope="local" args="scenename, lookatH, lookatV">
+		motionblur = 0.5;
+		transitiondelay = 0.0;
+		transitiontime = 0.5;
+		transitiontweentype = "easeoutquad";
+		
+		if(caller AND caller.ishotspot,
+			<!-- called from a hotspot, move toward the hotspot -->
+			if(caller.depth == 0,
+				<!-- 3d placed hotspot -->
+				set3dtransition("image", caller.tx,caller.ty,caller.tz, motionblur, hlookatoffset, transitiondelay, transitiontime, transitiontweentype);
+			  ,
+				<!-- a hotspot with a spherical position -->
+				caller.getcenter(h,v);
+				if(v GT -50 AND v LT +50 AND caller.depth GT 120, set(v,0));
+				set3dtransition("sphere", h,v,(min(caller.depth,1000)), motionblur, hlookatoffset, transitiondelay, transitiontime, transitiontweentype);
+			);
+		  ,
+			<!-- called from a layer or a script, recenter at the new pano center (3d-model/depthmap panos only) -->
+			if(image.depthmap.url,
+				set3dtransition("image", 0,0,0, motionblur, hlookatoffset, transitiondelay, transitiontime, transitiontweentype);
+			);
+		);
+		
+		loadscene(
+			get(scenename), null, MERGE, BLEND(get(transitiontime),get(transitiontweentype)) 
+		);
+		
+		delayedcall( 0.2, lookto(get(lookatH),get(lookatV), 120, smooth(1600, 720, 10000)) );
+	</action>
+
 	<action name="show_hotspot" scope="local" args="hotspotName">
 		set(hotspot[get(hotspotName)].visible, true);
 	</action>
@@ -118,7 +149,7 @@
 
 		<preview url="panos/Plaza.tiles/preview.jpg" />
 
-		<hotspot name="plaza => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, 0);"	 onover="show_hotspot(textoPasillo2)" onout="hide_hotspot(textoPasillo2);" ath="-21.4" atv="-3.34"  />
+		<hotspot name="plaza => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Pasillo, 0, 4);"	 onover="show_hotspot(textoPasillo2)" onout="hide_hotspot(textoPasillo2);" ath="-21.4" atv="-3.34"  />
 		<hotspot name="textoPasillo2" type="text" renderer="auto" ath="-21.4" atv="0.34" text="Pasillo" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
 
 		<image prealign="0|0.0|0">
@@ -135,9 +166,9 @@
 
 		<preview url="panos/Pasillo.tiles/preview.jpg" />
 
-		<hotspot name="pasillo => plaza" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Plaza, 160);" onover="show_hotspot(textoPlaza)" onout="hide_hotspot(textoPlaza);" ath="-178.8" atv="1.11"  />
+		<hotspot name="pasillo => plaza" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Plaza, 160, 4);" onover="show_hotspot(textoPlaza)" onout="hide_hotspot(textoPlaza);" ath="-178.8" atv="1.11"  />
 		<hotspot name="textoPlaza" type="text" renderer="auto" ath="-178.8" atv="5.11" text="Plaza" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
-		<hotspot name="pasillo => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo, -65);" onover="show_hotspot(textoParqueo2)" onout="hide_hotspot(textoParqueo2);" ath="3.82" atv="3.63"  />
+		<hotspot name="pasillo => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Parqueo, -65, 4);" onover="show_hotspot(textoParqueo2)" onout="hide_hotspot(textoParqueo2);" ath="3.82" atv="3.63"  />
 		<hotspot name="textoParqueo2" type="text" renderer="auto" ath="3.82" atv="7.63" text="Parqueo" bg="false" css="font-size:20px;color:#00000;font-family:Futura" interactive="false" visible="false"/>
 
 		<image prealign="0|0.0|0">
@@ -154,9 +185,9 @@
 
 		<preview url="panos/Parqueo.tiles/preview.jpg" />
 
-		<hotspot name="parqueo => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Pasillo, -180);" onover="show_hotspot(textoPasillo)" onout="hide_hotspot(textoPasillo);" ath="99.05" atv="-3.071"  />
+		<hotspot name="parqueo => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Pasillo, -180, 4);" onover="show_hotspot(textoPasillo)" onout="hide_hotspot(textoPasillo);" ath="99.05" atv="-3.071"  />
 		<hotspot name="textoPasillo" type="text" renderer="auto" ath="99.05" atv="2.50" text="Pasillo" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
-		<hotspot name="parqueo => cafeteria" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Cafeteria, -10);" onover="show_hotspot(textoCafeteria)" onout="hide_hotspot(textoCafeteria);" ath="-75.21" atv="1.022"  />
+		<hotspot name="parqueo => cafeteria" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Cafeteria, -10, 4);" onover="show_hotspot(textoCafeteria)" onout="hide_hotspot(textoCafeteria);" ath="-75.21" atv="1.022"  />
 		<hotspot name="textoCafeteria" type="text" renderer="auto" ath="-75.21" atv="5" text="Cafeteria" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
 
 		<image prealign="0|0.0|0">
@@ -173,7 +204,7 @@
 
 		<preview url="panos/Cafeteria.tiles/preview.jpg" />
 
-		<hotspot name="cafeteria => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="change_scene(scene_Parqueo, 103);" onover="show_hotspot(textoParqueo)" onout="hide_hotspot(textoPasillo);" ath="170" atv="0.19"  />
+		<hotspot name="cafeteria => parqueo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Parqueo, 103, 4);" onover="show_hotspot(textoParqueo)" onout="hide_hotspot(textoPasillo);" ath="170" atv="0.19"  />
 		<hotspot name="textoParqueo" type="text" renderer="auto" ath="170" atv="3.7" text="Parqueo" bg="false" css="font-size:20px;color:#FFFFFF;font-family:Futura" interactive="false" visible="false"/>
 		<image prealign="0|0.0|0">
 			<cube url="panos/Cafeteria.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
