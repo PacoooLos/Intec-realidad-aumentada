@@ -188,7 +188,7 @@
 		<hotspot name="parqueo => pasillo" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Pasillo, -180, 4);" onover="show_hotspot(textoPasillo)" onout="hide_hotspot(textoPasillo);" ath="99.05" atv="-3.071"  />
 		<hotspot name="textoPasillo" type="text" renderer="auto" ath="99.05" atv="2.50" text="Edificio AH" bg="false" css="font-size:20px;color:#FFFFFF; font-family: Futura" interactive="false" visible="false"/>
 		<hotspot name="parqueo => cafeteria" url="animatedhotspot_white.png" onloaded= "do_crop_animation(64,64,60);" onclick="scene3dtransition(scene_Cafeteria, -10, 4);" onover="show_hotspot(textoCafeteria)" onout="hide_hotspot(textoCafeteria);" ath="-75.21" atv="1.022"  />
-		<hotspot name="textoCafeteria" type="text" renderer="auto" ath="-75.21" atv="5" text="Cafeteria" bg="false" css="font-size:20px;color:#FFFFFF; font-family: Futura" interactive="false" visible="false"/>
+		<hotspot name="textoCafeteria" type="text" renderer="auto" ath="-75.21" atv="5" text="Cafetería" bg="false" css="font-size:20px;color:#FFFFFF; font-family: Futura" interactive="false" visible="false"/>
 
 		<image prealign="0|0.0|0">
 			<cube url="panos/Parqueo.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,768,1664" />
